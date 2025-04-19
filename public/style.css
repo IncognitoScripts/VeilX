@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.title {
+  font-size: 3em;
+  text-shadow: 0 0 15px #fff;
+  animation: fadeIn 1s ease;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  color: #ccc;
+  animation: fadeIn 1.2s ease;
+}
+
+.download-btn {
+  background: #00ff88;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 35px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ff8855;
+  transition: 0.3s ease;
+  animation: fadeIn 1.4s ease;
+}
+
+.download-btn:hover {
+  background: #00e676;
+  box-shadow: 0 0 25px #00ff88;
+  transform: scale(1.05);
+}
+
+.social-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 0 15px #ffffff33;
+}
+
+.discord {
+  background: #5865F2;
+  color: white;
+  box-shadow: 0 0 20px #5865F2;
+}
+
+.discord:hover {
+  background: #4752c4;
+  box-shadow: 0 0 30px #5865F2;
+  transform: scale(1.05);
+}
+
+.youtube {
+  background: #FF0000;
+  color: white;
+  box-shadow: 0 0 20px #FF0000;
+}
+
+.youtube:hover {
+  background: #cc0000;
+  box-shadow: 0 0 30px #FF0000;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
