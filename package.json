@@ -1,7 +1,6 @@
 {
-  "name": "veilx",
+  "name": "veilx-site",
   "version": "1.0.0",
-  "description": "Official website for VeilX executor",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
