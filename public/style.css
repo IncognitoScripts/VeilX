@@ -2,10 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0e0e0e;
-  color: white;
+  background: #000;
+  color: #fff;
   overflow-x: hidden;
-  transition: background 0.4s, color 0.4s;
+  transition: 0.5s ease;
+}
+
+body.light {
+  background: #fff;
+  color: #000;
 }
 
 #particles-js {
@@ -17,45 +22,45 @@ body {
 
 .container {
   text-align: center;
-  padding: 100px 20px 50px;
+  padding: 100px 20px;
 }
 
 .main-title {
   font-size: 4rem;
-  font-weight: 900;
-  margin: 0;
-  color: white;
-  text-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  animation: fadeInDown 1s ease-out;
 }
 
 .subtitle {
   font-size: 1.5rem;
-  color: #ccc;
   margin-top: 10px;
-  margin-bottom: 40px;
+  color: #ccc;
+  animation: fadeInDown 1.2s ease-out;
 }
 
 .download-btn {
   display: inline-block;
-  padding: 16px 40px;
-  font-size: 1.2rem;
-  border-radius: 30px;
+  margin: 40px 0 20px;
+  padding: 15px 40px;
   background: #00ffff;
-  color: black;
-  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
   font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
   transition: 0.3s ease;
-  box-shadow: 0 0 25px #00ffff;
+  box-shadow: 0 0 20px #00ffff;
 }
 
 .download-btn:hover {
   background: #00cccc;
-  box-shadow: 0 0 40px #00ffff;
   transform: scale(1.05);
 }
 
 .social-buttons {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -96,46 +101,80 @@ body {
   transform: scale(1.05);
 }
 
-#toggle-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-}
-
 #toggle {
+  margin-top: 30px;
   padding: 10px 20px;
-  font-size: 1rem;
   border-radius: 20px;
-  background: #222;
-  color: white;
   border: none;
+  background: #333;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 0 10px #ffffff33;
 }
 
 #toggle:hover {
-  background: #333;
+  background: #555;
   transform: scale(1.05);
 }
 
 .credits {
+  margin-top: 200px;
+  padding: 100px 20px 60px;
+  background: #0a0a0a;
+  color: #ccc;
   text-align: center;
-  padding: 40px 20px 20px;
-  color: #aaa;
-  font-size: 0.9rem;
-  background: #111;
-  margin-top: 100px;
+  animation: fadeInUp 1s ease-out;
 }
 
-body.light {
-  background: #f0f0f0;
-  color: #111;
+.credits-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+.credit-line {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #ddd;
+  transition: transform 0.3s ease;
+}
+
+.credit-line span {
+  font-weight: bold;
+  color: #00ffff;
+}
+
+.credit-line:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body.light .main-title {
-  color: #111;
+  color: #007777;
   text-shadow: none;
 }
 
@@ -144,14 +183,9 @@ body.light .subtitle {
 }
 
 body.light .download-btn {
-  background: #111;
-  color: white;
-  box-shadow: 0 0 25px #111;
-}
-
-body.light .download-btn:hover {
-  background: #333;
-  box-shadow: 0 0 40px #000;
+  background: #007777;
+  color: #fff;
+  box-shadow: 0 0 15px #007777;
 }
 
 body.light .discord {
@@ -163,6 +197,15 @@ body.light .youtube {
 }
 
 body.light .credits {
-  background: #ddd;
-  color: #444;
+  background: #eaeaea;
+  color: #222;
+}
+
+body.light .credits-title {
+  color: #007777;
+  text-shadow: none;
+}
+
+body.light .credit-line span {
+  color: #007777;
 }
